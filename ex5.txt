@@ -1,0 +1,63 @@
+ÈÑäÇãå Çí ˜å ÇÚÏÇÏí ÑÇ Èå ÕæÑÊ ÕÚæÏí ÏÑíÇİÊ ˜äÏ æ ÓÓ ÚÏÏí ÑÇ ÈÑÇí ÌÓÊ æ Ìæ ÏÑíÇİÊ ˜ÑÏå æ Èå ÕæÑÊ ÎØí ÚÏÏ ÑÇ íÏÇ ˜äÏ
+        int length,j,search,Found=0;
+        System.out.print("Enter length of array:");
+        Scanner sc = new Scanner(System.in);
+        length=sc.nextInt();
+        int[] intArray;
+        intArray = new int[length];
+        System.out.println("Enter the numbers incrementally:");
+         for(j=0;j<length;j++)
+          {
+          intArray[j] = sc.nextInt();
+          }
+        System.out.println("Enter Search number:");
+        search=sc.nextInt();
+         for(j=0;j<length;j++)
+          {
+           if(intArray[j]==search)
+            {
+              System.out.print(String.format("[%d]:",j));
+              System.out.println("Found");  
+              Found++;
+            }
+          }
+           if(Found==0)
+           {
+            System.out.println("not Found");    
+           }
+ÈÑäÇãå Çí ˜å ÇÚÏÇÏí ÑÇ Èå ÕæÑÊ ÕÚæÏí ÏÑíÇİÊ ˜äÏ æ ÓÓ ÚÏÏí ÑÇ ÈÑÇí ÌÓÊ æ Ìæ ÏÑíÇİÊ ˜ÑÏå æ Èå ÕæÑÊ ÏæÏæíí ÚÏÏ ÑÇ íÏÇ ˜äÏ
+      int length,j,search;
+      System.out.print("Enter length of array:");
+      Scanner sc = new Scanner(System.in);
+      length=sc.nextInt();
+      int[] intArray;
+      intArray = new int[length];
+      System.out.println("Enter the numbers incrementally:");
+       for(j=0;j<length;j++)
+        {
+         intArray[j] = sc.nextInt();
+        }
+      System.out.println("Enter Search number:");
+      search=sc.nextInt();
+      int half=length/2;
+       for(;;)
+        {
+         if(search>=intArray[length-1])
+          {
+           System.out.println("not Found"); 
+           break;
+          } 
+         if(intArray[half+1]==search||intArray[half+1]==search)
+          {
+           System.out.println("Found"); 
+           break;
+          } 
+         if(intArray[half]<=search)
+          {
+           half=(length+half)/2;
+          } 
+         if(intArray[half]>=search)
+          {
+           half=half/2;
+          }  
+       }
